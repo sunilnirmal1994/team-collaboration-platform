@@ -1,0 +1,138 @@
+.notification-list {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  
+    h2 {
+      text-align: center;
+    }
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  
+    /* Ensure proper wrapping on smaller screens */
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  .notification-content {
+    flex: 1;
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+  
+    small {
+      display: block;
+      color: #888;
+      margin-top: 5px;
+      font-size: 12px;
+    }
+  
+    /* Reduce font size for smaller screens */
+    @media (max-width: 768px) {
+      p {
+        font-size: 14px;
+      }
+  
+      small {
+        font-size: 11px;
+      }
+    }
+  }
+  
+  .notification-actions {
+    display: flex;
+    gap: 10px;
+  
+    button {
+      padding: 5px 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:first-child {
+        background-color: #007bff;
+        color: white;
+      }
+  
+      &:last-child {
+        background-color: #dc3545;
+        color: white;
+      }
+  
+      &:hover {
+        opacity: 0.9;
+      }
+  
+      /* Adjust button size and layout for smaller screens */
+      @media (max-width: 768px) {
+        padding: 8px;
+        font-size: 13px;
+      }
+  
+      @media (max-width: 576px) {
+        font-size: 12px;
+      }
+    }
+  
+    /* Stack buttons on smaller screens */
+    @media (max-width: 576px) {
+      flex-direction: column;
+      width: 100%;
+  
+      button {
+        width: 100%;
+        margin-top: 5px;
+      }
+    }
+  }
+  
+  /* Notification types styles */
+  .info {
+    background-color: #e7f3fe;
+    color: #31708f;
+  }
+  
+  .warning {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Media query for smaller devices */
+  @media (max-width: 768px) {
+    .notification-list {
+      max-width: 100%;
+      padding: 10px;
+    }
+  }
+  

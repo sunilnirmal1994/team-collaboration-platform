@@ -1,0 +1,18 @@
+<div class="project-list-container">
+  <h2>Project List</h2>
+
+  <div class="project" *ngFor="let project of projects; let i = index">
+    <h3>{{ project.name }}</h3>
+    <p>{{ project.description }}</p>
+    <p>Status: <span [ngClass]="{'completed': project.status === 'Completed', 'in-progress': project.status === 'In Progress'}">
+        {{ project.status }}</span>
+    </p>
+
+    <!-- Show button only if project is still in progress -->
+    <button *ngIf="project.status === 'In Progress'" (click)="completeProject(i)">
+      Mark as Completed
+    </button>
+  </div>
+</div>
+
+  

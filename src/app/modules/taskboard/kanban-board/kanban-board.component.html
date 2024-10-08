@@ -1,0 +1,25 @@
+<div class="kanban-container" cdkDropListGroup>
+  <!-- To Do Column -->
+  <div class="kanban-column">
+    <h3>To Do</h3>
+    <div cdkDropList [cdkDropListData]="todoTasks" class="task-list" (cdkDropListDropped)="drop($event)">
+      <div class="task" *ngFor="let task of todoTasks" cdkDrag>{{ task }}</div>
+    </div>
+  </div>
+
+  <!-- In Progress Column -->
+  <div class="kanban-column">
+    <h3>In Progress</h3>
+    <div cdkDropList [cdkDropListData]="inProgressTasks" class="task-list" (cdkDropListDropped)="drop($event)">
+      <div class="task" *ngFor="let task of inProgressTasks" cdkDrag>{{ task }}</div>
+    </div>
+  </div>
+
+  <!-- Completed Column -->
+  <div class="kanban-column">
+    <h3>Completed</h3>
+    <div cdkDropList [cdkDropListData]="completedTasks" class="task-list" (cdkDropListDropped)="drop($event)">
+      <div class="task" *ngFor="let task of completedTasks" cdkDrag>{{ task }}</div>
+    </div>
+  </div>
+</div>

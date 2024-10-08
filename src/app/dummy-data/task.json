@@ -1,0 +1,12 @@
+{
+    "id": 1,
+    "title": "Task 1",
+    "description": "This is related to Task 1",
+    "status": "In Progress",
+    "assignedTo": "user1",
+    "dueDate": "01-11-2024",
+    "priority": "High",
+    "createdAt": "2024-10-05T12:34:56Z",
+    "updatedAt": "2024-10-07T10:11:00Z"
+  }
+  
